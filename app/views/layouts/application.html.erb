@@ -8,10 +8,35 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<%= link_to "ESPN FAN FORUM", root_path, class: "navbar-brand" %>
+			</div>
 
-<%= yield %>
+			<ul class="navbar-nav nav navbar-right">
+				<% if user_signed_in? %>
+					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to "Log In", new_user_session_path %></li>
+					<li><%= link_to "Sign Up", new_user_registration_path %></li>
+				<% end %>
+			</ul>
+
+			<% if user_signed_in? %>
+				<p><%= link_to "Post It", new_message_path, class: "navbar-text navbar-link" %></p>
+			<% end %>
+
+		</div>
+	</nav>
+
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
