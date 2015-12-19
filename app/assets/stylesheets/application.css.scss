@@ -14,5 +14,176 @@
  *= require_self
  */
 
+@import url(https://fonts.googleapis.com/css?family=Lato);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/* General styles */
+
+body {
+	background: -webkit-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+  background:    -moz-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+  background:     -ms-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+  background:      -o-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+  background:         linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;	
+}
+
+.btn-custom {
+	background-color: #fff;
+	color: #ec6767;
+	font-family: 'Asap', sans-serif; 
+	font-weight: 300;
+	border-radius: 6px;
+	padding: 10px 20px;
+	&:hover {
+		color: #383838;
+		transition: 0.5s;
+		background-color: #fff;
+		text-decoration: none;
+	}
+}
+
+.btn:hover {
+	transition: 0.5s;
+	color: #383838;
+	background-color: #fff;
+}
+
+
+/* Navbar styles */
+
+.navbar {
+	font-family: 'Candal', sans-serif;
+	text-transform: uppercase;
+}
+
+.navbar-default {
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #fff;
+
+	.navbar-nav > li > a {
+		color: #222;
+	}
+
+	.navbar-link {
+		color: #222;
+	}
+
+	.navbar-brand {
+		color: #ec6767;
+		letter-spacing: 1.1px;
+		font-size: 1.9em;
+	}
+
+}
+
+
+/* Links styles */
+
+.links {
+	margin-top: 20px;
+	.btn-default {
+		color: #ec6767;
+	}
+}
+
+
+/* Message styles */
+
+.message {
+	box-sizing: border-box;
+	background-color: #9696a9;
+	border-radius: 5px;
+	margin-bottom: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 1.4em 1.4em;
+	color: #FFF;
+	height: 100px;
+	border-bottom: 4px solid #ec6767;
+
+	.message-title {
+		font-size: 1.2em;
+		font-family: 'Asap', sans-serif;
+		font-weight: 300;
+		margin-top: 0;
+		text-color: #FFF;
+		margin-bottom: 25px;
+	}
+
+	.btn-custom {
+		margin-top: 12px;
+	}
+
+}
+
+.message:nth-child(4n) {
+	clear: left;
+}
+
+/* Message show-page styles */
+
+.message-show {
+	box-sizing: border-box;
+	background-color: #9f9f9f;
+	border-radius: 5px;
+	padding: 2.0em 1.5em;
+	border-bottom: 4px solid #ec6767;
+	color: #fff;
+	font-family: 'Asap', sans-serif;
+	font-weight: 300;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	.message-desc {
+		font-size: 1.1em;
+		line-height: 1.75;
+		margin-bottom: 50px;
+	}
+
+	.message-posted-by {
+		color: #eee;
+		font-size: 0.9em;
+	}
+
+	.reply-to-msg {
+		margin-top: 50px;
+	}
+
+}
+
+
+/* Comment styles */
+
+.comment {
+	border-bottom: 1px solid #ec6767;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	.comment-content {
+		font-size: 1.25em;
+	}	
+
+	.comment-posted-by {
+		color: #eee;
+		font-size: 0.8em;
+	}
+
+	.links {
+		margin-top: 15px;
+		a {
+			color: #FFF;
+			margin-right: 15px;
+		}
+	}
+}
