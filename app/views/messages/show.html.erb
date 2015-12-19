@@ -4,6 +4,12 @@
 		<p class="message-posted-by"><%= time_ago_in_words(@message.created_at) %> ago </p>
 		<p class="message-desc"><%= @message.description %></p>
 
+		<h3 class="comment-section-header">Comments:</h3>
+		<p><%= render @message.comments %></p>
+
+		<h3 class="reply-to-msg">Join Discussion:</h3>
+		<%= render 'comments/form' %>
+
 		<div class="links btn-group">
 			<%= link_to "Back", root_path, class: "btn btn-default" %>
 			<%= link_to "Fix", edit_message_path(@message), class: "btn btn-primary" %>
